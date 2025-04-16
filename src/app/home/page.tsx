@@ -1,10 +1,11 @@
 import React from "react";
+import Navbar from "@/components/navbar/navbar";
 
 const Home: React.FC = () => {
   return (
     <div>
-      <h1>Welcome to ProPC!</h1>
-      <p>Your one-stop shop for custom and prebuilt PCs.</p>
+      <Navbar />
+      <h1>سلام</h1>
     </div>
   );
 };
