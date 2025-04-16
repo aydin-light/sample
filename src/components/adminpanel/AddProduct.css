@@ -1,0 +1,34 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #EEEEEE;
+  }
+  
+  select, input {
+    padding: 8px;
+    border: 1px solid #76ABAE;
+    border-radius: 5px;
+    background: transparent;
+    color: #EEEEEE;
+  }
+  select:focus {
+    color: #76ABAE;
+  }
+  button {
+    padding: 10px;
+    background: #76ABAE;
+    color: #23272A;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #EEEEEE;
+    color: #222831;
+  }

@@ -1,12 +1,41 @@
-"use client"
-import React, { useState } from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 
 const Navbar: React.FC = () => {
+  const [loggedInUser, setLoggedInUser] = useState<UserType | null>(null);
   const [showAccordion, setShowAccordion] = useState(false);
 
-  const toggleAccordion = () => {
-    setShowAccordion(!showAccordion);
+  type UserType = {
+    id: number;
+    name: string;
+    email: string;
+    password: string;
+    role: "admin" | "user";
+  };
+  useEffect(() => {
+    const user = localStorage.getItem("loggedInUser");
+    if (user) {
+      const parsedUser: UserType = JSON.parse(user);
+      setLoggedInUser(parsedUser);
+    }
+  }, []);
+
+
+  const handleLogout = () => {
+    localStorage.removeItem("loggedInUser");
+    setLoggedInUser(null);
+    window.location.href = "/signin";
+  };
+
+  const handlePanelRedirect = () => {
+    if (loggedInUser) {
+      if (loggedInUser.role === "admin") {
+        window.location.href = "/admin-panel";
+      } else {
+        window.location.href = "/profile";
+      }
+    }
   };
 
   return (
@@ -16,10 +45,21 @@ const Navbar: React.FC = () => {
           پروپی‌سی
         </button>
         <div className="nav-links">
-          <button className="nav-item" onClick={() => (window.location.href = "/signin")}>
-            ورود
-          </button>
-          <button className="products-text" onClick={toggleAccordion}>
+          {loggedInUser ? (
+            <>
+              <button className="nav-item" onClick={handlePanelRedirect}>
+                پنل
+              </button>
+              <button className="nav-item logout-button" onClick={handleLogout}>
+                خروج
+              </button>
+            </>
+          ) : (
+            <button className="nav-item" onClick={() => (window.location.href = "/signin")}>
+              ورود
+            </button>
+          )}
+          <button className="products-text" onClick={() => setShowAccordion(!showAccordion)}>
             محصولات
           </button>
           <button className="nav-item" onClick={() => (window.location.href = "/prebuild")}>

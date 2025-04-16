@@ -1,0 +1,80 @@
+.filter-container {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-dropdown {
+  padding: 8px;
+  background: #2C2F33;
+  color: #EEEEEE;
+  border: 1px solid #76ABAE;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inventory-container {
+  max-height: 450px;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #2C2F33;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #EEEEEE;
+}
+
+.inventory-table thead {
+  position: sticky;
+  top: 0;
+  background-color: #23272A;
+  font-weight: bold;
+}
+
+.inventory-table th,
+.inventory-table td {
+  padding: 12px;
+  border-bottom: 1px solid #76ABAE;
+  text-align: center;
+}
+
+.inventory-table tr:hover {
+  background-color: #41474D;
+}
+
+.inventory-btn {
+  background: #76ABAE;
+  border: none;
+  color: #23272A;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inventory-btn:hover {
+  background-color: #EEEEEE;
+  color: #222831;
+}
+
+.inventory-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.inventory-container::-webkit-scrollbar-track {
+  background: #2C2F33;
+  border-radius: 10px;
+}
+
+.inventory-container::-webkit-scrollbar-thumb {
+  background: #76ABAE;
+  border-radius: 10px;
+}
+
+.inventory-container::-webkit-scrollbar-thumb:hover {
+  background: #EEEEEE;
+}

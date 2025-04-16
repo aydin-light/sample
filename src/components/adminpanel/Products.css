@@ -1,0 +1,77 @@
+.products-container {
+    max-height: 450px;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #2C2F33;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #EEEEEE;
+}
+
+.products-table thead {
+    position: sticky;
+    top: 0;
+    background-color: #23272A;
+    font-weight: bold;
+}
+
+.products-table th,
+.products-table td {
+    padding: 12px;
+    border-bottom: 1px solid #76ABAE;
+    text-align: center;
+}
+
+.products-table tr:hover {
+    background-color: #41474D;
+}
+
+.product-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-btn.delete {
+    color: #FF6B6B;
+}
+
+.product-btn.delete:hover {
+    color: #EEEEEE;
+    background: #FF6B6B;
+}
+
+.product-btn.edit {
+    color: #76ABAE;
+}
+
+.product-btn.edit:hover {
+    color: #EEEEEE;
+    background: #76ABAE;
+}
+
+.products-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.products-container::-webkit-scrollbar-track {
+    background: #2C2F33;
+    border-radius: 10px;
+}
+
+.products-container::-webkit-scrollbar-thumb {
+    background: #76ABAE;
+    border-radius: 10px;
+}
+
+.products-container::-webkit-scrollbar-thumb:hover {
+    background: #EEEEEE;
+}
