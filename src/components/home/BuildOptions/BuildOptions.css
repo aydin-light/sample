@@ -1,0 +1,45 @@
+.build-options {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+  }
+  
+  .pre-build,
+  .custom-build {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .text-content {
+    width: 50%;
+  }
+  
+  .image-content {
+    width: 40%;
+  }
+  
+  .image-content img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background: #547792;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  .cta-button:hover {
+    background: #222831;
+  }
+  

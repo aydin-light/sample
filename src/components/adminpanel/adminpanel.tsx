@@ -26,6 +26,12 @@ const AdminPanel: React.FC = () => {
 
   return (
     <div className="admin-container">
+      <div className="admin-content">
+        {selectedOption === "inventory" && <Inventory />}
+        {selectedOption === "products" && <Products />}
+        {selectedOption === "pricing" && <Pricing />}
+        {selectedOption === "add-product" && <AddProduct />}
+      </div>
       <div className="admin-sidebar">
         <button className="admin-option" onClick={() => setSelectedOption("inventory")}>
           مدیریت موجودی
@@ -39,12 +45,6 @@ const AdminPanel: React.FC = () => {
         <button className="admin-option" onClick={() => setSelectedOption("add-product")}>
           افزودن محصول جدید
         </button>
-      </div>
-      <div className="admin-content">
-        {selectedOption === "inventory" && <Inventory />}
-        {selectedOption === "products" && <Products />}
-        {selectedOption === "pricing" && <Pricing />}
-        {selectedOption === "add-product" && <AddProduct />}
       </div>
     </div>
   );

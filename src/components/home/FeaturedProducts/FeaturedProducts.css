@@ -1,0 +1,33 @@
+.featured-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+  }
+  
+  .product-card {
+    background: #31363F;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    color: #EEEEEE;
+  }
+  
+  .product-card h3 {
+    color: #EEEEEE;
+  }
+  
+  .product-card p {
+    font-weight: bold;
+  }
+  
+  .product-card span {
+    color: #EEEEEE;
+  }
+  
+  .product-card:hover {
+    background: #222831;
+    color: #76ABAE;
+  }
+  

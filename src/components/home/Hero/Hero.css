@@ -1,0 +1,39 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: white;
+  }
+  
+  .hero-content {
+    width: 45%;
+    text-align: center;
+    color: #222831;
+  }
+  
+  .hero-image {
+    width: 45%;
+    text-align: center;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background: #547792;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  .cta-button:hover {
+    background: #415e6b;
+  }
+  

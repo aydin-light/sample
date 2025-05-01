@@ -13,9 +13,15 @@ const Signin: React.FC = () => {
   const handleLogin = (event: React.FormEvent) => {
     event.preventDefault();
     const user = users.find((u) => u.email === email && u.password === password);
+    
     if (user) {
       localStorage.setItem("loggedInUser", JSON.stringify(user));
-      router.push(user.role === "admin" ? "/admin-panel" : "/profile");
+      
+      if (user.role === "admin") {
+        router.push("/admin/admin-panel");
+      } else {
+        router.push("/public/home");
+      }
     } else {
       setMessage("ایمیل یا رمز عبور اشتباه است.");
     }

@@ -18,7 +18,7 @@ const Pricing: React.FC = () => {
       setPricingData(updatedProducts);
       setModalType(null);
       setSelectedProduct(null);
-    }
+    } 
   };
 
   const applyDiscount = (discount: number) => {
@@ -36,7 +36,7 @@ const Pricing: React.FC = () => {
 
   return (
     <div className="admin-section">
-      <h2>تنظیمات قیمت‌گذاری</h2>
+      <h2> قیمت‌گذاری</h2>
 
       <div className="pricing-container">
         <table className="pricing-table">
