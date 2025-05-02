@@ -41,11 +41,11 @@ const Products: React.FC = () => {
         <table className="products-table">
           <thead>
             <tr>
-              <th>دسته‌بندی</th>
-              <th>زیر دسته</th>
-              <th>نام محصول</th>
-              <th>قیمت</th>
               <th>ویرایش</th>
+              <th>قیمت</th>
+              <th>برند</th>
+              <th>دسته‌بندی</th>
+              <th>نام محصول</th>
             </tr>
           </thead>
           <tbody>
@@ -53,10 +53,6 @@ const Products: React.FC = () => {
               category.subcategories.map((sub, subIndex) =>
                 sub.items.map((item, itemIndex) => (
                   <tr key={`${categoryIndex}-${subIndex}-${itemIndex}`}>
-                    <td>{category.category}</td>
-                    <td>{sub.name}</td>
-                    <td>{item.name}</td>
-                    <td>{item.price}</td>
                     <td>
                       <button 
                         className="product-btn delete" 
@@ -71,6 +67,10 @@ const Products: React.FC = () => {
                         ویرایش
                       </button>
                     </td>
+                    <td>{item.price}</td>
+                    <td>{sub.name}</td>
+                    <td>{category.category}</td>
+                    <td>{item.name}</td>
                   </tr>
                 ))
               )

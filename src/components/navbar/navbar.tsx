@@ -41,8 +41,8 @@ const Navbar: React.FC = () => {
   return (
     <div>
       <nav className="navbar">
-        <button className="site-name" onClick={() => (window.location.href = "/home")}>
-          پروپی‌سی
+        <button className="site-name" onClick={() => (window.location.href = "/public/home")}>
+          propc
         </button>
         <div className="nav-links">
           {loggedInUser ? (
@@ -55,17 +55,17 @@ const Navbar: React.FC = () => {
               </button>
             </>
           ) : (
-            <button className="nav-item" onClick={() => (window.location.href = "/signin")}>
+            <button className="nav-item" onClick={() => (window.location.href = "/auth/signin")}>
               ورود
             </button>
           )}
           <button className="products-text" onClick={() => setShowAccordion(!showAccordion)}>
             محصولات
           </button>
-          <button className="nav-item" onClick={() => (window.location.href = "/prebuild")}>
+          <button className="nav-item" onClick={() => (window.location.href = "/public/prebuild")}>
             سیستم‌های آماده
           </button>
-          <button className="nav-item" onClick={() => (window.location.href = "/custom-build")}>
+          <button className="nav-item" onClick={() => (window.location.href = "/public/custom-build")}>
             اسمبل شخصی‌سازی‌شده
           </button>
         </div>

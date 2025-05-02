@@ -1,0 +1,42 @@
+.filter-sidebar {
+    background: #31363F;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    color: #EEEEEE;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+.filter-sidebar h2 {
+    text-align: center;
+}
+
+.filter-sidebar label {
+    display: block;
+    margin-top: 10px;
+}
+
+.filter-sidebar select,
+.filter-sidebar input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: #76ABAE;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #547792;
+}

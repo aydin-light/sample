@@ -66,7 +66,7 @@ const Inventory: React.FC = () => {
           </tbody>
         </table>
       </div>
-
+ 
       {modalType === "add" && <AddInventoryModal onClose={() => setModalType(null)} onConfirm={(amount) => updateInventory(amount)} />}
       {modalType === "subtract" && <SubtractInventoryModal onClose={() => setModalType(null)} onConfirm={(amount) => updateInventory(-amount)} />}
     </div>
