@@ -16,7 +16,7 @@ const Inventory: React.FC = () => {
       const updatedProducts = [...inventoryData];
       updatedProducts[categoryIndex].subcategories[subIndex].items[itemIndex].inventory += amount;
       setInventoryData(updatedProducts);
-      setModalType(null);
+      setModalType(null); 
       setSelectedProduct(null);
     }
   };

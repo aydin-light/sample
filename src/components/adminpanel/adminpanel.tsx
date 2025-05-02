@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Products from "./Products";
-import Pricing from "./Pricing";
+import Management from "./Management";
 import AddProduct from "./AddProduct";
 import Inventory from "./inventor";
 import "./adminpanel.css";
@@ -33,7 +33,7 @@ const AdminPanel: React.FC = () => {
         <button className="admin-option" onClick={() => setSelectedOption("products")}>
           مدیریت محصولات
         </button>
-        <button className="admin-option" onClick={() => setSelectedOption("pricing")}>
+        <button className="admin-option" onClick={() => setSelectedOption("Management")}>
           تنظیمات قیمت‌گذاری
         </button>
         <button className="admin-option" onClick={() => setSelectedOption("add-product")}>
@@ -43,7 +43,7 @@ const AdminPanel: React.FC = () => {
       <div className="admin-content">
         {selectedOption === "inventory" && <Inventory />}
         {selectedOption === "products" && <Products />}
-        {selectedOption === "pricing" && <Pricing />}
+        {selectedOption === "Management" && <Management />}
         {selectedOption === "add-product" && <AddProduct />}
       </div>
     </div>

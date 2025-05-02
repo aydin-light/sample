@@ -1,4 +1,9 @@
-.pricing-container {
+.management-section {
+    padding: 20px;
+    color: #EEEEEE;
+}
+
+.management-table-container {
     max-height: 450px;
     overflow-y: auto;
     border-radius: 10px;
@@ -7,71 +12,90 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.pricing-table {
+.management-table {
     width: 100%;
     border-collapse: collapse;
     color: #EEEEEE;
 }
 
-.pricing-table thead {
+.management-table thead {
     position: sticky;
     top: 0;
     background-color: #23272A;
     font-weight: bold;
 }
 
-.pricing-table th,
-.pricing-table td {
+.management-table th,
+.management-table td {
     padding: 12px;
     border-bottom: 1px solid #76ABAE;
     text-align: center;
 }
 
-.pricing-table tr:hover {
+.management-table tr:hover {
     background-color: #41474D;
 }
 
-.pricing-btn {
+.management-btn {
     background: none;
     border: none;
     font-size: 14px;
     padding: 6px 10px;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0 2px;
 }
 
-.pricing-btn.price {
+.management-btn.price {
     color: #76ABAE;
 }
 
-.pricing-btn.price:hover {
+.management-btn.price:hover {
     color: #EEEEEE;
     background: #76ABAE;
 }
 
-.pricing-btn.discount {
+.management-btn.discount {
     color: #FFA726;
 }
 
-.pricing-btn.discount:hover {
+.management-btn.discount:hover {
     color: #EEEEEE;
     background: #FFA726;
 }
 
-.pricing-container::-webkit-scrollbar {
+.management-btn.add {
+    color: #4CAF50;
+}
+
+.management-btn.add:hover {
+    color: #EEEEEE;
+    background: #4CAF50;
+}
+
+.management-btn.subtract {
+    color: #F44336;
+}
+
+.management-btn.subtract:hover {
+    color: #EEEEEE;
+    background: #F44336;
+}
+
+.management-table-container::-webkit-scrollbar {
     width: 10px;
 }
 
-.pricing-container::-webkit-scrollbar-track {
+.management-table-container::-webkit-scrollbar-track {
     background: #2C2F33;
     border-radius: 10px;
 }
 
-.pricing-container::-webkit-scrollbar-thumb {
+.management-table-container::-webkit-scrollbar-thumb {
     background: #76ABAE;
     border-radius: 10px;
 }
 
-.pricing-container::-webkit-scrollbar-thumb:hover {
+.management-table-container::-webkit-scrollbar-thumb:hover {
     background: #EEEEEE;
 }
