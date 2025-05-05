@@ -1,13 +1,11 @@
-import React from "react";
-import "./globals.css";
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+import ReduxWrapper from "@/components/redux/ReduxWrapper";
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="fa" dir="rtl">
       <body>
-        <main>{children}</main>
+        <ReduxWrapper>{children}</ReduxWrapper>
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}
