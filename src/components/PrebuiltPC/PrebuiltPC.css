@@ -1,0 +1,54 @@
+.prebuilt-container {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .category-buttons {
+    margin-bottom: 30px;
+  }
+  
+  .category-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #31363F;
+    color: #EEEEEE;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .category-buttons .active {
+    background-color: #76ABAE;
+    color: #222831;
+    font-weight: bold;
+  }
+  
+  .pc-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    justify-content: center;
+  }
+  
+  .pc-card {
+    background-color: #31363F;
+    color: #EEEEEE;
+    border-radius: 8px;
+    padding: 20px;
+    transition: 0.3s;
+  }
+  
+  .pc-card:hover {
+    background-color: #222831;
+    color: #76ABAE;
+  }
+  
+  .pc-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
