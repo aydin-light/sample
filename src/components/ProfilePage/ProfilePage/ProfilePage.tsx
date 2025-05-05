@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import "./ProfilePage.css";
 
 interface Purchase {
@@ -20,6 +21,7 @@ interface Purchase {
 }
 
 const ProfilePage: React.FC = () => {
+  const router = useRouter();
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -52,69 +54,39 @@ const ProfilePage: React.FC = () => {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    router.push("/");
+  };
+
   return (
     <div className="profile-page">
       <h1>پروفایل من</h1>
-      <div className="profile-field">
-        <label>نام:</label>
-        {editingField === "name" ? (
-          <input
-            type="text"
-            name="name"
-            value={user.name}
-            onChange={handleFieldChange}
-            onBlur={() => saveField("name")}
-            onKeyDown={(e) => handleKeyDown(e, "name")}
-            autoFocus
-          />
-        ) : (
-          <div className="profile-display">
-            <span>{user.name || "—"}</span>
-            <button onClick={() => setEditingField("name")}>✏️ ویرایش</button>
-          </div>
-        )}
-      </div>
 
-      <div className="profile-field">
-        <label>ایمیل:</label>
-        {editingField === "email" ? (
-          <input
-            type="email"
-            name="email"
-            value={user.email}
-            onChange={handleFieldChange}
-            onBlur={() => saveField("email")}
-            onKeyDown={(e) => handleKeyDown(e, "email")}
-            autoFocus
-          />
-        ) : (
-          <div className="profile-display">
-            <span>{user.email || "—"}</span>
-            <button onClick={() => setEditingField("email")}>✏️ ویرایش</button>
-          </div>
-        )}
-      </div>
+      {/* Editable fields */}
+      {["name", "email", "phone"].map((field) => (
+        <div className="profile-field" key={field}>
+          <label>{field === "name" ? "نام:" : field === "email" ? "ایمیل:" : "شماره تماس:"}</label>
+          {editingField === field ? (
+            <input
+              type={field === "email" ? "email" : field === "phone" ? "tel" : "text"}
+              name={field}
+              value={user[field as keyof typeof user]}
+              onChange={handleFieldChange}
+              onBlur={() => saveField(field as any)}
+              onKeyDown={(e) => handleKeyDown(e, field as any)}
+              autoFocus
+            />
+          ) : (
+            <div className="profile-display">
+              <span>{user[field as keyof typeof user] || "—"}</span>
+              <button onClick={() => setEditingField(field as any)}>✏️ ویرایش</button>
+            </div>
+          )}
+        </div>
+      ))}
 
-      <div className="profile-field">
-        <label>شماره تماس:</label>
-        {editingField === "phone" ? (
-          <input
-            type="tel"
-            name="phone"
-            value={user.phone}
-            onChange={handleFieldChange}
-            onBlur={() => saveField("phone")}
-            onKeyDown={(e) => handleKeyDown(e, "phone")}
-            autoFocus
-          />
-        ) : (
-          <div className="profile-display">
-            <span>{user.phone || "—"}</span>
-            <button onClick={() => setEditingField("phone")}>✏️ ویرایش</button>
-          </div>
-        )}
-      </div>
-
+      {/* Purchase history */}
       <div className="purchase-history">
         <h2>سفارش‌های من</h2>
         {purchases.length === 0 ? (
@@ -135,6 +107,9 @@ const ProfilePage: React.FC = () => {
           ))
         )}
       </div>
+
+      {/* Logout button */}
+      <button className="logout-btn" onClick={handleLogout}>🚪 خروج از حساب</button>
     </div>
   );
 };
