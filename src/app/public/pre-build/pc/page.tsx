@@ -1,10 +1,10 @@
 import PublicLayout from "@/app/PublicLayout";
-import PrebuiltPC from "@/components/PrebuiltPC/PrebuiltPC";
+import SelectedPC from "@/components/PrebuiltPC/SelectedPC";
 
 export default function Page() {
   return (
     <PublicLayout>
-      <PrebuiltPC />
+      <SelectedPC/>
     </PublicLayout>
   );
 }

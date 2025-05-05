@@ -1,0 +1,92 @@
+const prebuiltPCs = {
+    workstation: [
+      {
+        name: "Workstation Basic",
+        cpu: "Intel i5-13400",
+        gpu: "Intel UHD 730",
+        ram: "16GB DDR4",
+        storage: "512GB SSD",
+        price: 120000000,
+        image: "https://tse2.mm.bing.net/th?id=OIP.OBmnwdMP_ELoOz_48dpHowHaHa&pid=Api&P=0&h=220",
+      },
+      {
+        name: "Workstation Plus",
+        cpu: "Intel i7-13700",
+        gpu: "NVIDIA Quadro T1000",
+        ram: "32GB DDR4",
+        storage: "1TB SSD",
+        price: 220000000,
+        image: "https://tse2.mm.bing.net/th?id=OIP.-8yJQOuu2DfSOWyQ9UueBwDHE4&pid=Api&P=0&h=220",
+      },
+      {
+        name: "Workstation Pro",
+        cpu: "AMD Ryzen 9 7950X",
+        gpu: "NVIDIA RTX 4000",
+        ram: "64GB DDR5",
+        storage: "2TB NVMe SSD",
+        price: 350000000,
+        image: "https://tse3.mm.bing.net/th?id=OIP.tAInLajgbIBYgfe8iJri7AHaHa&pid=Api&P=0&h=220",
+      },
+    ],
+    budgetGaming: [
+      {
+        name: "Gaming Starter",
+        cpu: "Intel i3-12100F",
+        gpu: "GTX 1650",
+        ram: "16GB DDR4",
+        storage: "500GB SSD",
+        price: 100000000,
+        image: "https://tse1.mm.bing.net/th?id=OIP.94_qREC9Y8xPGOXnnpoY0AHaHa&pid=Api&P=0&h=220",
+      },
+      {
+        name: "Gaming Essentials",
+        cpu: "AMD Ryzen 5 5600",
+        gpu: "RX 6600",
+        ram: "16GB DDR4",
+        storage: "1TB HDD + 256GB SSD",
+        price: 130000000,
+        image: "https://tse3.mm.bing.net/th?id=OIP.COC-jgjrox2H1GuBX6oAfgHaHa&pid=Api&P=0&h=220",
+      },
+      {
+        name: "Gaming Plus",
+        cpu: "Intel i5-12400F",
+        gpu: "RTX 3050",
+        ram: "16GB DDR4",
+        storage: "1TB SSD",
+        price: 150000000,
+        image: "https://tse4.mm.bing.net/th?id=OIP.HmjqGbCsJ_J5RuCGYZ6NSwHaHa&pid=Api&P=0&h=220",
+      },
+    ],
+    highEndGaming: [
+      {
+        name: "Elite Gamer",
+        cpu: "Intel i7-14700K",
+        gpu: "RTX 4070",
+        ram: "32GB DDR5",
+        storage: "1TB NVMe SSD",
+        price: 280000000,
+        image: "https://m.media-amazon.com/images/I/71RHOqZFKkL.jpg",
+      },
+      {
+        name: "Ultra Gamer",
+        cpu: "AMD Ryzen 7 7800X3D",
+        gpu: "RTX 4080",
+        ram: "32GB DDR5",
+        storage: "2TB NVMe SSD",
+        price: 380000000,
+        image: "https://tse1.mm.bing.net/th?id=OIP.Rojv2BaHTGhWs0AzrG8F8wHaJY&pid=Api&P=0&h=220",
+      },
+      {
+        name: "God Tier",
+        cpu: "Intel i9-14900K",
+        gpu: "RTX 4090",
+        ram: "64GB DDR5",
+        storage: "4TB NVMe SSD",
+        price: 600000000,
+        image: "https://png.pngtree.com/png-clipart/20230913/original/pngtree-vibrant-pc-case-showcase-png-image_11081161.png",
+      },
+    ],
+  };
+  
+  export default prebuiltPCs;
+  
