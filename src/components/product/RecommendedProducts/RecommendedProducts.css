@@ -1,0 +1,50 @@
+.recommended-products {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    text-align: center; 
+  }
+  
+  .recommended-products h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .recommended-list {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .recommended-card {
+    background: white;
+    padding: 10px;
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .recommended-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .recommended-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .recommended-card h3 {
+    font-size: 1rem;
+    margin: 10px 0 5px;
+  }
+  
+  .recommended-card p {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  

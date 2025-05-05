@@ -1,9 +1,9 @@
-import ProfilePage from "@/components/ProfilePage/ProfilePage/ProfilePage";
+import CheckoutPage from "@/components/CheckoutPage/CheckoutPage";
 import PublicLayout from "@/app/PublicLayout";
 export default function Page() {
   return (
     <PublicLayout>
-      <ProfilePage />
+      <CheckoutPage />
     </PublicLayout>
   );
 }
