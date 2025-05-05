@@ -8,13 +8,42 @@
     text-align: right;
 }
 
-.profile-form input {
+.profile-field {
+    margin-bottom: 20px;
+}
+
+.profile-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.profile-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f3f3;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.profile-display span {
+    flex: 1;
+}
+
+.profile-display button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0070f3;
+}
+
+.profile-field input {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
     font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 .purchase-history {

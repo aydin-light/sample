@@ -26,6 +26,7 @@ const ProfilePage: React.FC = () => {
     phone: "",
   });
 
+  const [editingField, setEditingField] = useState<null | "name" | "email" | "phone">(null);
   const [purchases, setPurchases] = useState<Purchase[]>([]);
 
   useEffect(() => {
@@ -36,37 +37,82 @@ const ProfilePage: React.FC = () => {
     setPurchases(savedPurchases);
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const updatedUser = { ...user, [e.target.name]: e.target.value };
-    setUser(updatedUser);
-    localStorage.setItem("user", JSON.stringify(updatedUser));
+  const handleFieldChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  const saveField = (field: "name" | "email" | "phone") => {
+    localStorage.setItem("user", JSON.stringify(user));
+    setEditingField(null);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>, field: "name" | "email" | "phone") => {
+    if (e.key === "Enter") {
+      saveField(field);
+    }
   };
 
   return (
     <div className="profile-page">
       <h1>پروفایل من</h1>
-      <div className="profile-form">
-        <input
-          type="text"
-          name="name"
-          placeholder="نام"
-          value={user.name}
-          onChange={handleChange}
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="ایمیل"
-          value={user.email}
-          onChange={handleChange}
-        />
-        <input
-          type="tel"
-          name="phone"
-          placeholder="شماره تماس"
-          value={user.phone}
-          onChange={handleChange}
-        />
+      <div className="profile-field">
+        <label>نام:</label>
+        {editingField === "name" ? (
+          <input
+            type="text"
+            name="name"
+            value={user.name}
+            onChange={handleFieldChange}
+            onBlur={() => saveField("name")}
+            onKeyDown={(e) => handleKeyDown(e, "name")}
+            autoFocus
+          />
+        ) : (
+          <div className="profile-display">
+            <span>{user.name || "—"}</span>
+            <button onClick={() => setEditingField("name")}>✏️ ویرایش</button>
+          </div>
+        )}
+      </div>
+
+      <div className="profile-field">
+        <label>ایمیل:</label>
+        {editingField === "email" ? (
+          <input
+            type="email"
+            name="email"
+            value={user.email}
+            onChange={handleFieldChange}
+            onBlur={() => saveField("email")}
+            onKeyDown={(e) => handleKeyDown(e, "email")}
+            autoFocus
+          />
+        ) : (
+          <div className="profile-display">
+            <span>{user.email || "—"}</span>
+            <button onClick={() => setEditingField("email")}>✏️ ویرایش</button>
+          </div>
+        )}
+      </div>
+
+      <div className="profile-field">
+        <label>شماره تماس:</label>
+        {editingField === "phone" ? (
+          <input
+            type="tel"
+            name="phone"
+            value={user.phone}
+            onChange={handleFieldChange}
+            onBlur={() => saveField("phone")}
+            onKeyDown={(e) => handleKeyDown(e, "phone")}
+            autoFocus
+          />
+        ) : (
+          <div className="profile-display">
+            <span>{user.phone || "—"}</span>
+            <button onClick={() => setEditingField("phone")}>✏️ ویرایش</button>
+          </div>
+        )}
       </div>
 
       <div className="purchase-history">

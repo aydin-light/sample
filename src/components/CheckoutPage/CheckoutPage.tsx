@@ -55,7 +55,7 @@ const CheckoutPage: React.FC = () => {
       dispatch(removeFromCart({ name: item.name }));
     });
 
-    router.push("/public/payment"); 
+    router.push("/public/profile"); 
   };
 
   return (

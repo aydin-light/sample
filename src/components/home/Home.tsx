@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   return (
     <div>
        <Hero/>
-       <CategorySlider/>
+       {/* <CategorySlider/> */}
        <FeaturedProducts/>
        <BuildOptions/>
     </div>
